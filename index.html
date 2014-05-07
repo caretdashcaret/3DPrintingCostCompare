@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>3D Printer vs 3D Printing Service</title>
+    <link rel="stylesheet" type="text/css" href="lib/c3.css">
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script src="lib/c3.min.js"></script>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="style/custom.css">
+  </head>
+  <body>
+    <div class="container">
+        <h1>3D Printer vs 3D Printing Service</h1>
+        <br>
+        <p>
+            There are many factors to consider when deciding whether to buy a 3D printer or use a 3D printing service.
+            <br>
+            Here, we take a look at <b>cost</b>.
+        </p>
+        <div id="chart"></div>
+
+        <br>
+        <br>
+        <p class="left ">
+            Here are the costs of printing figurines of volume X cm^3, using a <a href="https://www.makerbot.com/">MakerBot Replicator 2</a> printer and PLA filments for MakerBot,
+            a <a href="http://formlabs.com/products/our-printer">Formlabs Form1 printer</a> and clear resin for Form1, and <a href="http://www.sculpteo.com/en/">Sculpteo</a>, an online 3D printing service.
+            <br>
+            <br>
+            For 3D printers, cost is modelled as the printer and material cost (including shipping and tax) plus any additional material and shipping cost
+            if the total volume of the figurines exceed the volume of the material. Material cost is modelled this way instead cost per volume, because material is sold in
+            discreet units. Printing 30 figurines will have the same upfront cost as printing 40 figurines on a 3D printer. The volume of material used per figurine is greater
+            than the volume of the figurine itself because both the <a href="https://www.makerbot.com/">MakerBot</a> and <a href="http://formlabs.com/products/our-printer">Form1</a> printers need
+            support structures. The figurine is estimated to have a total volume of Y cm^3, with supports simulated with Z, and is factored into the calculations.
+            <br>
+            <br>
+            For <a href="http://www.sculpteo.com/en/">Sculpteo</a>, white plastic is selected as the print material. Sculpteo (individual shipping) assumes for a number of figurines, multiple orders are placed and each figurine is shipped individually.
+            Sculpteo (aggregate shipping) assumes for a number of figurines, a bulk order is placed with only one shipping cost.
+            <br>
+            <br>
+            This comparison is a response to <a href="http://blog.sculpteo.com/2014/02/20/should-you-buy-a-3d-printer-or-use-a-3d-printing-service/">
+            a study by Sculpteo</a> that concluded 3D printing service as a cheaper alternative than investing in a 3D printer.
+            That study omits shipping prices, which I believe artificially lowers the cost of using 3D printing services.
+            <br>
+            <br>
+            All prices are taken from their respective stores.
+            The estimate for the shipping is to New York City.
+            For source code and raw data, see GitHub.
+        </p>
+        <p>
+            By Jenny - <a href="http://caretdashcaret.wordpress.com">CaretDashCaret</a>
+        </p>
+    </div>
+  </body>
+
+  <script src="graph/data.js"></script>
+  <script src="graph/plotter.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+</html>
