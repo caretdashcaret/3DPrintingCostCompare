@@ -4,7 +4,7 @@
 //material comes in 1kg of PLA, PLA density is ~1.25 g/cm3, so 800cm^3 for print volume with 100% infill
 var makerbot = {
         "name": "MakerBot",
-        "initial": 4328.14,
+        "initial": 2272.14,
         "recurring": 63.79,
         "volume": 800
     }
@@ -22,26 +22,26 @@ var form1 = {
 }
 
 //Sculpteo
-//costs $8.25 in white plastic plus $6.5 in shipping
+//costs $8.03 in white plastic plus $6.5 in shipping
 var sculpteo = {
         "name": "Sculpteo (individual shipping)",
-        "cost": 14.75
+        "cost": 14.53
 }
 
 //Sculpteo aggregate
 var sculpteo_aggregate = {
         "name": "Sculpteo (aggregate shipping)",
-        "cost": 8.25,
+        "cost": 8.03,
         "shipping": 6.5
 }
 
 var x_at_a_time = 40
-var max_prints = 800 / x_at_a_time
+var max_prints = 720 / x_at_a_time
 
 
 function calculate_printer_costs(printer_info){
-    var support_material = 1.5
-    var print_volume = 3.8 * support_material
+    var support_material = 1.36
+    var print_volume = 5.76 + support_material
 
     var results = []
     var current_volume = printer_info["volume"]
